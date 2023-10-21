@@ -1,65 +1,129 @@
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-1/Poppins-Regular.ttf);
+}
+
 .wrapper {
-    width: 100%;
-    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #564E4E;
 
 }
 
 .header {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    background-image: url(image\ 3.svg);
-    padding: 300px 0;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+.mainTitle {
+    position: absolute;
+    top: 100px;
+    left: 335px;
+}
+
+.subtitle {
+    position: absolute;
+    top: 240px;
+    left: 345px;
+}
+
+.logoHeader {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.content {
+    font-family: 'Poppins';
+    padding: 20px
+}
+
+body {
+    margin: 0;
 }
 
 #BigBlock1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 60px 60px;
-
 }
 
 .block1 {
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+.imgB1 {
     width: 25%;
+    height: 25%;
 }
 
 .BlockContent {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 50px;
+    flex-grow: 1;
 }
 
+.BigBlock2-1 {
+    flex-grow: 1;
+    width: 50%;
+    align-items: center;
+    margin-right: 70px;
+}
 
 .BlockContent2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 50px;
+
+}
+
+#product {
+    flex-grow: 1;
+    width: 25%;
+    margin-right: 15px;
+}
+
+.imgProduct {
+    width: 90%;
+    height: 90%;
+}
+
+.imgHeader {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.BigBlock4 {
+    background: linear-gradient(45deg, #f7f1f1, #f5e6de);
+    margin-top: 80px
 }
 
 .inform4 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .mng {
     width: 30%
 }
 
-.pBlock4 {
-    height: 60px;
-    margin: 30px 0 50px 0;
-}
+
 
 .BigBlock5 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 50px;
+
 }
 
 .imgBlock5 {
@@ -67,6 +131,11 @@
     justify-content: center;
     align-items: center;
     margin: 0 10px 0 0;
+}
+
+.title06 {
+    width: 60%;
+    align-items: center;
 }
 
 #imgBlock5 {
@@ -78,22 +147,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 100px;
 }
 
 .footerBlock {
+    padding: 10px;
     background-color: black;
+    margin: 0;
 }
 
 .listFooter {
-    width: 25%;
+    flex-grow: 1;
 }
 
 .informBlock5 {
     color: white;
-}
-
-.listFooter {
-    margin: 60px;
 }
 
 #moreinfo {
@@ -103,9 +172,37 @@
 
 /* --Mobile--*/
 @media only screen and (max-width: 46.1875em) {
+    .content {
+        align-items: center;
+        padding: 10px;
+    }
+
+
+    .mainTitle {
+
+        top: 75px;
+        left: 150px;
+    }
+
+    .imgTitle {
+        width: 229px;
+        height: 54px;
+    }
+
+    .subtitle {
+        width: 292px;
+        height: 72px;
+        top: 115px;
+        left: 130px;
+    }
+
+    .img5 {
+        margin: 0;
+    }
 
     #BigBlock1 {
         flex-direction: column;
+        align-items: center;
     }
 
     .title01 {
@@ -113,7 +210,14 @@
     }
 
     .BlockContent {
+        align-items: center;
+        padding: 10px;
         flex-direction: column-reverse;
+    }
+
+    .BigBlock2-1 {
+        width: 100%;
+        margin-right: 0;
     }
 
     .img5 {
@@ -133,29 +237,26 @@
 
     .BlockContent2 {
         display: grid;
-        grid-template-columns: 100px 100px;
-        grid-template-rows: 200px 200x;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto
     }
 
-    .BigBlock4 {
-        margin: 10px 0;
-        width: 100%;
-        height: 1000px;
+    .BigBlock3 {
+        align-items: center;
+        margin-top: 60px;
     }
 
     .inform4 {
+        padding: 15px;
+        align-items: center;
         display: flex;
         flex-direction: column;
-        margin: 25px 0;
-        position: relative;
-        top: 0;
-        right: 25%;
     }
 
-    .pBlock4 {
-        width: 200px;
-        margin: 0 0 25px 0;
+    .mng {
+        width: 100%;
     }
+
 
     #imgBlock4 {
         margin: 50px 0 10px 0;
@@ -169,21 +270,38 @@
         width: 100%;
     }
 
+    .imgBlock5 {
+        width: 100%;
+        margin: 0;
+    }
+
     .pBlock5 {
         width: 100%;
     }
 
     .BigBlock5 {
         flex-direction: column;
+        padding: 10px;
 
     }
 
     .title06 {
+
+        width: 100%;
+    }
+
+    .emailBar {
         width: 100%;
     }
 
     .footer {
+        width: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    .listFooter {
+        padding: 10px;
+        width: 100%;
     }
 }
